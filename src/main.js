@@ -1,4 +1,5 @@
 import './style.css';
+import headerGraphic from './assets/header_topic_graphic.png';
 
 // ==========================================
 // 1. BLOG POSTS DATA
@@ -191,7 +192,7 @@ function renderApp() {
           <p>Docker & Cyber Security</p>
         </div>
         <div class="header-graphic">
-          <img src="/src/assets/header_topic_graphic.png" alt="Docker & Cyber Security Graphic" class="header-topic-img">
+          <img src="${headerGraphic}" alt="Docker & Cyber Security Graphic" class="header-topic-img">
         </div>
       </div>
     </header>
