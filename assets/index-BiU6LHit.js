@@ -1,4 +1,4 @@
-(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=[{id:`docker-implementation`,title:`Topic-Based Tech Tool Implementation: Docker`,date:`May 4, 2018`,author:`Admin`,readTime:`6 min read`,excerpt:`Learn how to use Docker to build, package, and deploy a Node.js web application. We'll explore the setup process, Dockerfiles, and how containerization solves production environment consistency.`,category:`WordPress`,tags:[`Docker`,`Containerization`,`NodeJS`,`DevOps`],content:`
+(function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),e.crossOrigin===`use-credentials`?t.credentials=`include`:e.crossOrigin===`anonymous`?t.credentials=`omit`:t.credentials=`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=`/docker/assets/header_topic_graphic-DifXZ70u.png`,t=[{id:`docker-implementation`,title:`Topic-Based Tech Tool Implementation: Docker`,date:`May 4, 2018`,author:`Admin`,readTime:`6 min read`,excerpt:`Learn how to use Docker to build, package, and deploy a Node.js web application. We'll explore the setup process, Dockerfiles, and how containerization solves production environment consistency.`,category:`WordPress`,tags:[`Docker`,`Containerization`,`NodeJS`,`DevOps`],content:`
 <h2>1. Introduction to the Technology</h2>
 <p><strong>Docker</strong> is an open-source platform that enables developers to build, deploy, run, update, and manage containers—highly executable components that combine application source code with the operating system libraries and dependencies required to run that code in any environment. In modern software engineering, Docker solves the classic <em>"it works on my machine"</em> problem by ensuring consistency across development, testing, and production environments.</p>
 
@@ -136,7 +136,7 @@ target_ip = socket.gethostbyname(target)
 
 <h2>5. Personal Learning Reflection</h2>
 <p>Writing this basic scanner demystified network recon. It visually reinforced how the standard TCP 3-Way Handshake operates—connecting via SYN, SYN-ACK, and ACK. It also highlighted the necessity of configuring sensible timeouts; otherwise, a single non-responsive port can freeze the thread for minutes. My next step will be to re-write this script using Python threads to achieve lightning-fast scan operations.</p>
-    `}],t={currentView:`home`,searchQuery:``,selectedCategory:`All`};function n(){let e=document.querySelector(`#app`);e&&(e.innerHTML=`
+    `}],n={currentView:`home`,searchQuery:``,selectedCategory:`All`};function r(){let t=document.querySelector(`#app`);t&&(t.innerHTML=`
     <header class="header-banner">
       <div class="container header-banner-content">
         <div class="header-text">
@@ -144,7 +144,7 @@ target_ip = socket.gethostbyname(target)
           <p>Docker & Cyber Security</p>
         </div>
         <div class="header-graphic">
-          <img src="/src/assets/header_topic_graphic.png" alt="Docker & Cyber Security Graphic" class="header-topic-img">
+          <img src="${e}" alt="Docker & Cyber Security Graphic" class="header-topic-img">
         </div>
       </div>
     </header>
@@ -153,12 +153,12 @@ target_ip = socket.gethostbyname(target)
       <div class="container navbar">
         <ul class="nav-links">
           <li>
-            <a href="#" class="${t.currentView===`home`?`active`:``}" data-nav="home">
+            <a href="#" class="${n.currentView===`home`?`active`:``}" data-nav="home">
               Home
             </a>
           </li>
-          <li><a href="#" class="${t.currentView===`about`?`active`:``}" data-nav="about">About</a></li>
-          <li><a href="#" class="${t.currentView===`contact`?`active`:``}" data-nav="contact">Contact</a></li>
+          <li><a href="#" class="${n.currentView===`about`?`active`:``}" data-nav="about">About</a></li>
+          <li><a href="#" class="${n.currentView===`contact`?`active`:``}" data-nav="contact">Contact</a></li>
         </ul>
         <div class="navbar-right" id="navbar-search-trigger">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -218,7 +218,7 @@ target_ip = socket.gethostbyname(target)
         </div>
       </div>
     </footer>
-  `,r(),t.currentView===`home`?i():t.currentView===`about`?o():t.currentView===`contact`?s():a(t.currentView),c())}function r(){document.querySelectorAll(`[data-nav]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault();let r=e.currentTarget.getAttribute(`data-nav`);t.currentView=r,r===`home`&&(t.selectedCategory=`All`,t.searchQuery=``),n(),window.scrollTo({top:0,behavior:`smooth`})})});let e=document.querySelector(`#navbar-search-trigger`);e&&e.addEventListener(`click`,()=>{let e=document.querySelector(`#search-input`);e&&(e.focus(),e.scrollIntoView({behavior:`smooth`,block:`center`}))})}function i(){let r=document.querySelector(`#main-content-pane`);if(!r)return;let i=e.filter(e=>{let n=t.selectedCategory===`All`||e.category===t.selectedCategory,r=e.title.toLowerCase().includes(t.searchQuery.toLowerCase())||e.excerpt.toLowerCase().includes(t.searchQuery.toLowerCase());return n&&r}),a=``;i.length===0?a=`
+  `,i(),n.currentView===`home`?a():n.currentView===`about`?s():n.currentView===`contact`?c():o(n.currentView),l())}function i(){document.querySelectorAll(`[data-nav]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault();let t=e.currentTarget.getAttribute(`data-nav`);n.currentView=t,t===`home`&&(n.selectedCategory=`All`,n.searchQuery=``),r(),window.scrollTo({top:0,behavior:`smooth`})})});let e=document.querySelector(`#navbar-search-trigger`);e&&e.addEventListener(`click`,()=>{let e=document.querySelector(`#search-input`);e&&(e.focus(),e.scrollIntoView({behavior:`smooth`,block:`center`}))})}function a(){let e=document.querySelector(`#main-content-pane`);if(!e)return;let i=t.filter(e=>{let t=n.selectedCategory===`All`||e.category===n.selectedCategory,r=e.title.toLowerCase().includes(n.searchQuery.toLowerCase())||e.excerpt.toLowerCase().includes(n.searchQuery.toLowerCase());return t&&r}),a=``;i.length===0?a=`
       <div class="post-card" style="text-align: center; padding: 50px 20px;">
         <i class="fa-solid fa-magnifying-glass" style="font-size: 2rem; color: var(--color-text-muted); margin-bottom: 16px;"></i>
         <h2>No posts found</h2>
@@ -243,7 +243,7 @@ target_ip = socket.gethostbyname(target)
         <span class="page-num">2</span>
         <span class="page-num"><i class="fa-solid fa-chevron-right" style="font-size: 0.75rem;"></i></span>
       </div>
-    `),r.innerHTML=a,r.querySelectorAll(`[data-post-link], [data-post-btn]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),t.currentView=e.currentTarget.getAttribute(`data-post-link`)||e.currentTarget.getAttribute(`data-post-btn`),n(),window.scrollTo({top:0,behavior:`smooth`})})})}function a(r){let i=document.querySelector(`#main-content-pane`);if(!i)return;let a=e.find(e=>e.id===r);if(!a){i.innerHTML=`<h2>Post not found</h2>`;return}i.innerHTML=`
+    `),e.innerHTML=a,e.querySelectorAll(`[data-post-link], [data-post-btn]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),n.currentView=e.currentTarget.getAttribute(`data-post-link`)||e.currentTarget.getAttribute(`data-post-btn`),r(),window.scrollTo({top:0,behavior:`smooth`})})})}function o(e){let i=document.querySelector(`#main-content-pane`);if(!i)return;let a=t.find(t=>t.id===e);if(!a){i.innerHTML=`<h2>Post not found</h2>`;return}i.innerHTML=`
     <article class="post-detail-view">
       <div class="back-btn-wrapper">
         <button class="back-to-feed-btn" id="back-to-feed-btn">
@@ -266,7 +266,7 @@ target_ip = socket.gethostbyname(target)
         ${a.content}
       </div>
     </article>
-  `,document.querySelector(`#back-to-feed-btn`).addEventListener(`click`,()=>{t.currentView=`home`,n()}),i.querySelectorAll(`.copy-code-btn`).forEach(e=>{e.addEventListener(`click`,e=>{let t=e.currentTarget.getAttribute(`data-code-id`),n=document.getElementById(t);n&&navigator.clipboard.writeText(n.innerText).then(()=>{let t=e.currentTarget.innerHTML;e.currentTarget.innerHTML=`<i class="fa-solid fa-check"></i> Copied!`,setTimeout(()=>{e.currentTarget.innerHTML=t},2e3)})})})}function o(){let e=document.querySelector(`#main-content-pane`);e&&(e.innerHTML=`
+  `,document.querySelector(`#back-to-feed-btn`).addEventListener(`click`,()=>{n.currentView=`home`,r()}),i.querySelectorAll(`.copy-code-btn`).forEach(e=>{e.addEventListener(`click`,e=>{let t=e.currentTarget.getAttribute(`data-code-id`),n=document.getElementById(t);n&&navigator.clipboard.writeText(n.innerText).then(()=>{let t=e.currentTarget.innerHTML;e.currentTarget.innerHTML=`<i class="fa-solid fa-check"></i> Copied!`,setTimeout(()=>{e.currentTarget.innerHTML=t},2e3)})})})}function s(){let e=document.querySelector(`#main-content-pane`);e&&(e.innerHTML=`
     <div class="post-detail-view" style="padding: 40px;">
       <h1 style="font-family: var(--font-heading); font-size: 2.3rem; color: var(--color-primary); margin-bottom: 24px;">About the Portfolio</h1>
       <p style="color: var(--color-text-dark); font-size: 1.05rem; margin-bottom: 20px; line-height: 1.8;">
@@ -283,7 +283,7 @@ target_ip = socket.gethostbyname(target)
         <li>Engineering a premium, highly responsive custom styling layout.</li>
       </ul>
     </div>
-  `)}function s(){let e=document.querySelector(`#main-content-pane`);e&&(e.innerHTML=`
+  `)}function c(){let e=document.querySelector(`#main-content-pane`);e&&(e.innerHTML=`
     <div class="post-detail-view" style="padding: 40px;">
       <h1 style="font-family: var(--font-heading); font-size: 2.3rem; color: var(--color-primary); margin-bottom: 24px;">Contact Us</h1>
       <p style="color: var(--color-text-dark); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.8;">
@@ -310,10 +310,10 @@ target_ip = socket.gethostbyname(target)
         <button type="submit" class="read-more-btn" style="max-width: 150px; justify-content: center;">Send Message</button>
       </form>
     </div>
-  `)}function c(){let e=document.querySelector(`#sidebar-pane`);e&&(e.innerHTML=`
+  `)}function l(){let e=document.querySelector(`#sidebar-pane`);e&&(e.innerHTML=`
     <div class="sidebar-widget">
       <form class="search-form" id="search-form">
-        <input type="text" class="search-input" placeholder="Search ..." id="search-input" value="${t.searchQuery}">
+        <input type="text" class="search-input" placeholder="Search ..." id="search-input" value="${n.searchQuery}">
         <button type="submit" class="search-btn" aria-label="Search">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
@@ -374,4 +374,4 @@ target_ip = socket.gethostbyname(target)
         </div>
       </div>
     </div>
-  `,l())}function l(){let e=document.querySelector(`#search-form`);e&&e.addEventListener(`submit`,e=>{e.preventDefault(),t.searchQuery=document.querySelector(`#search-input`).value,t.currentView=`home`,i()}),document.querySelectorAll(`[data-recent-id]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),t.currentView=e.currentTarget.getAttribute(`data-recent-id`),n(),window.scrollTo({top:0,behavior:`smooth`})})}),u()}function u(){let e=document.querySelector(`#terminal-input`),t=document.querySelector(`#terminal-window`);if(!e||!t)return;t.addEventListener(`click`,()=>{e.focus()}),e.addEventListener(`keydown`,t=>{if(t.key===`Enter`){let t=e.value.trim();if(e.value=``,!t)return;n(`guest@theerdha:~$ ${t}`,`#cbd5e1`),r(t)}});function n(e,n=`#38bdf8`){let r=document.createElement(`div`);r.className=`terminal-line`,r.style.color=n,r.innerHTML=e,t.appendChild(r),t.scrollTop=t.scrollHeight}function r(e){let r=e.toLowerCase().split(` `),i=r[0],a=r.slice(1).join(` `);switch(i){case`help`:n(`Active sandbox parameters:`,`#a78bfa`),n(`  <span style="color:#e2e8f0">help</span> - Display active lists.`),n(`  <span style="color:#e2e8f0">scan &lt;target&gt;</span> - Trace TCP port connections (Post #2).`),n(`  <span style="color:#e2e8f0">docker build</span> - Assemble app container (Post #1).`),n(`  <span style="color:#e2e8f0">clear</span> - Clear prompt buffer.`),n(`  <span style="color:#e2e8f0">whoami</span> - Check active user context.`);break;case`clear`:t.innerHTML=``;break;case`whoami`:n(`guest_user // Session key: WP_GUEST_404`,`#10b981`);break;case`scan`:if(!a)n(`Usage error: scan &lt;ip/url&gt;`,`#f43f5e`);else{n(`Scanning target ${a}...`,`#38bdf8`),n(`Scanning common ports [22, 80, 443] at timeout 0.5s...`,`#e2e8f0`);let e=[22,80,443],t=0,r=setInterval(()=>{if(t<e.length){let r=e[t];n(`Port ${r}/tcp (${r===22?`ssh`:r===80?`http`:`https`}) -> <span style="color:#10b981; font-weight:600;">OPEN</span>`,`#10b981`),t++}else clearInterval(r),n(`TCP connection port scan completed successfully.`,`#38bdf8`)},350)}break;case`docker`:a===`build`?(n(`Building container context: my-node-app...`,`#e2e8f0`),setTimeout(()=>n(`FROM node:18-alpine -> pull successful`,`#38bdf8`),200),setTimeout(()=>n(`WORKDIR /usr/src/app -> complete`,`#e2e8f0`),500),setTimeout(()=>n(`COPY package*.json ./ -> complete`,`#e2e8f0`),800),setTimeout(()=>n(`RUN npm install -> complete (added 50 packages)`,`#e2e8f0`),1100),setTimeout(()=>n(`COPY . . -> complete`,`#e2e8f0`),1400),setTimeout(()=>{n(`Successfully built ad372bdcf361`,`#10b981`),n(`Successfully tagged my-node-app:latest`,`#10b981`)},1700)):n(`Error: Invalid arguments. Try "docker build"`,`#f43f5e`);break;default:n(`Command not found: '${i}'. Type 'help' for active commands.`,`#f43f5e`);break}}}n();
+  `,u())}function u(){let e=document.querySelector(`#search-form`);e&&e.addEventListener(`submit`,e=>{e.preventDefault(),n.searchQuery=document.querySelector(`#search-input`).value,n.currentView=`home`,a()}),document.querySelectorAll(`[data-recent-id]`).forEach(e=>{e.addEventListener(`click`,e=>{e.preventDefault(),n.currentView=e.currentTarget.getAttribute(`data-recent-id`),r(),window.scrollTo({top:0,behavior:`smooth`})})}),d()}function d(){let e=document.querySelector(`#terminal-input`),t=document.querySelector(`#terminal-window`);if(!e||!t)return;t.addEventListener(`click`,()=>{e.focus()}),e.addEventListener(`keydown`,t=>{if(t.key===`Enter`){let t=e.value.trim();if(e.value=``,!t)return;n(`guest@theerdha:~$ ${t}`,`#cbd5e1`),r(t)}});function n(e,n=`#38bdf8`){let r=document.createElement(`div`);r.className=`terminal-line`,r.style.color=n,r.innerHTML=e,t.appendChild(r),t.scrollTop=t.scrollHeight}function r(e){let r=e.toLowerCase().split(` `),i=r[0],a=r.slice(1).join(` `);switch(i){case`help`:n(`Active sandbox parameters:`,`#a78bfa`),n(`  <span style="color:#e2e8f0">help</span> - Display active lists.`),n(`  <span style="color:#e2e8f0">scan &lt;target&gt;</span> - Trace TCP port connections (Post #2).`),n(`  <span style="color:#e2e8f0">docker build</span> - Assemble app container (Post #1).`),n(`  <span style="color:#e2e8f0">clear</span> - Clear prompt buffer.`),n(`  <span style="color:#e2e8f0">whoami</span> - Check active user context.`);break;case`clear`:t.innerHTML=``;break;case`whoami`:n(`guest_user // Session key: WP_GUEST_404`,`#10b981`);break;case`scan`:if(!a)n(`Usage error: scan &lt;ip/url&gt;`,`#f43f5e`);else{n(`Scanning target ${a}...`,`#38bdf8`),n(`Scanning common ports [22, 80, 443] at timeout 0.5s...`,`#e2e8f0`);let e=[22,80,443],t=0,r=setInterval(()=>{if(t<e.length){let r=e[t];n(`Port ${r}/tcp (${r===22?`ssh`:r===80?`http`:`https`}) -> <span style="color:#10b981; font-weight:600;">OPEN</span>`,`#10b981`),t++}else clearInterval(r),n(`TCP connection port scan completed successfully.`,`#38bdf8`)},350)}break;case`docker`:a===`build`?(n(`Building container context: my-node-app...`,`#e2e8f0`),setTimeout(()=>n(`FROM node:18-alpine -> pull successful`,`#38bdf8`),200),setTimeout(()=>n(`WORKDIR /usr/src/app -> complete`,`#e2e8f0`),500),setTimeout(()=>n(`COPY package*.json ./ -> complete`,`#e2e8f0`),800),setTimeout(()=>n(`RUN npm install -> complete (added 50 packages)`,`#e2e8f0`),1100),setTimeout(()=>n(`COPY . . -> complete`,`#e2e8f0`),1400),setTimeout(()=>{n(`Successfully built ad372bdcf361`,`#10b981`),n(`Successfully tagged my-node-app:latest`,`#10b981`)},1700)):n(`Error: Invalid arguments. Try "docker build"`,`#f43f5e`);break;default:n(`Command not found: '${i}'. Type 'help' for active commands.`,`#f43f5e`);break}}}r();
